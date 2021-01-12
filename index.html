@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162772829-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162772829-1');
+    </script>
+    <meta charset="utf-8">
+    <!-- below is for linking all github pages favicons -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>(Old) Will Dickinson</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="dynamic-text.css" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h3><a href="index.html">Will Dickinson</a></h3>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Projects</a>
+                <div class="dropdown-content">
+                    <a href="https://evad1n.github.io/ballistic">Ballistic</a>
+                    <a href="life">Life</a>
+                    <a href="2048">2048</a>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <h1><span id="phrase"></span>
+                <div id="blinking-cursor"></div>
+            </h1>
+        </div>
+        <div class="overview content">
+            <h2>PROJECTS</h2>
+            <p>I am a Computer Science student currently studying at Dixie State University. I have a small background
+                in game design as I previously studied it for 2 years. This is an outdated version of my website.</p>
+        </div>
+        <div id="project1_img" class="project_img content" onclick="window.location.href = 'ballistic';"></div>
+        <div id="project1" class="project_text content">
+            <h3>Ballistic</h3>
+            <p>A 2 player tank shooter game that is played on the same keyboard. Made with JavaScript and PixiJS.</p>
+        </div>
+        <div id="project2_img" class="project_img content" onclick="window.location.href = 'life';"></div>
+        <div id="project2" class="project_text content">
+            <h3>Life</h3>
+            <p>The classic Game of Life by John Horton Conway. Made with vanilla JavaScript.</p>
+        </div>
+        <div id="project3_img" class="project_img content" onclick="window.location.href = '2048';">
+        </div>
+        <div id="project3" class="project_text content">
+            <h3>2048</h3>
+            <p>The 2048 tile game. Includes save states that are in your browser's local storage. Made with vanilla
+                JavaScript.</p>
+        </div>
+        <footer>
+            <ul>
+                <li>Email: willdickinson98@gmail.com</li>
+                <li>Github: <a href="https://github.com/evad1n">github.com/evad1n</a></li>
+            </ul>
+            <p>&copy; Will Dickinson 2020</p>
+        </footer>
+    </div>
+</body>
+<script src="dynamic-text.js"></script>
+<script src="moving-pixels.js"></script>
+
+</html>

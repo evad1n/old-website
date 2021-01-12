@@ -1,0 +1,219 @@
+:root {
+    --primary: rgb(0, 0, 0);
+    --secondary: rgb(255, 255, 255);
+    --tertiary: rgb(150, 150, 150);
+    --quaternary: rgb(180, 180, 180);
+    /* --quiternay */
+}
+
+body{
+    font-family: 'Audiowide', serif;
+    margin: 0;
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 400px 200px 300px 300px 300px 80px;
+    grid-template-areas: 
+        "nav nav nav nav"
+        "hero hero hero hero"
+        "overview overview overview overview"
+        "project1 project1 project1_img project1_img"
+        "project2_img project2_img project2 project2"
+        "project3 project3 project3_img project3_img"
+        "footer footer footer footer";
+    border-collapse: collapse;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.4s ease;
+}
+
+a:hover{
+    color: var(--tertiary);
+}
+
+h2, h3{
+    text-align: center;
+}
+
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 4px solid var(--secondary);
+    background-color: var(--primary);
+}
+
+/*dropdown menu*/
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    padding: 15px 0;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0%;
+    position: absolute;
+    top: 49px;
+    background-color: var(--quaternary);
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--primary);
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+    transition: background-color 0.4s ease;
+}
+
+.dropdown-content a:hover{
+    background-color: var(--tertiary);
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 100%;
+}
+
+/* ############################################################################################################ */
+
+.hero{
+    grid-area: hero;
+    position: relative;
+    /* background-image: url(media/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    z-index: -1;
+}
+
+.hero h1{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-size: 4rem;
+    z-index: 1;
+}
+
+.content{
+    border: 2px solid var(--secondary);
+}
+
+.project3, .project3_img{
+    border-bottom: none;
+}
+
+.content h3{
+    margin-top: 40px;
+}
+
+.content p{
+    padding: 0px 40px;
+}
+
+.overview{
+    grid-area: overview;
+    background-color: var(--primary);
+}
+
+.overview p{
+    padding: 0px 300px;
+}
+
+.project_text{
+    background-color: #ddd;
+    color: var(--primary)
+}
+
+.project_img{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-color: var(--primary);
+}
+
+.project_img:hover{
+    cursor: pointer;
+}
+
+#project1{
+    grid-area: project1;
+}
+
+#project1_img{
+    grid-area: project1_img;
+    background-image: url(media/ballistic.png);
+}
+
+#project2{
+    grid-area: project2;
+}
+
+#project2_img{
+    grid-area: project2_img;
+    background-image: url(media/life.png);
+}
+
+#project3{
+    grid-area: project3;
+}
+
+#project3_img{
+    grid-area: project3_img;
+    background-image: url(media/2048.png);
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 4px solid var(--secondary);
+}
+
+footer ul{
+    margin: 5px 0;
+}
+
+footer ul li{
+    position: relative;
+    top: 10px;  
+    text-decoration: none;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 10px;
+    margin: 0;
+}
+
+footer p{
+    padding-bottom: 10px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+/* ####################################################################################### */
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 400px) {
+    body {
+      background-color: black;
+    }
+  }
+
+/* FIX THIS LOLL!!!! */

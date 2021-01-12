@@ -1,0 +1,23 @@
+#blinking-cursor {
+    position: relative;
+    bottom: -3px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 25px;
+    height: 10px;
+    background-color: var(--secondary);
+}
+
+.blink{
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to { 
+        opacity: 0; 
+    }
+    50% { 
+        opacity: 100%; 
+    }
+}
